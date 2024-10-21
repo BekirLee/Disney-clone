@@ -4,17 +4,16 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 // import './tailwind.css'
 import Header from './components/Header'
+import '../src/css/output.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
+      <div className="bg-[#040714]">
         <Header />
-
-      </h1>
+      </div>
     </>
   )
 }
