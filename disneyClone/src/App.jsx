@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#040714]">
+      <div className="bg-[#040714] h-screen">
         <Header />
       </div>
     </>
