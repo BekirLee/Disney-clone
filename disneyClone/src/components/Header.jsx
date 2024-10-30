@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../imgs/disney-logo-disney-icon-transparent-free-png.webp'
 import userPhoto from '../imgs/user.png'
 // import { IconName } from "react-icons/fi"
@@ -10,6 +10,9 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa";
 import HeaderIcon from './HeaderIcon';
 import { HiDotsVertical } from "react-icons/hi";
+// 
+import api from '../Services/GlobalApi.jsx'
+
 
 
 function Header() {
@@ -43,6 +46,39 @@ function Header() {
         },
 
     ]
+
+    function TrendingVideos() {
+        const [videos, setVideos] = useState([]); // Videoları tutacak state
+        const [loading, setLoading] = useState(true); // Yüklenme durumu
+
+        useEffect(() => {
+            api.getTrendingVideos()
+                .then(res => {
+                    console.log(res)
+                    setVideos(res.data.results); // Gelen veriyi state'e set et
+                    setLoading(false); // Yüklenme durumunu false yap
+                })
+                .catch((err) => {
+                    console.error(err); // Hataları console'a yaz
+                    setLoading(false); // Yüklenme durumunu hata olsa bile false yap
+                });
+        }, []); // Boş bağımlılık dizisi, component mount olduğunda bir kere çalışacak
+
+        if (loading) {
+            return <div>Loading...</div>; // Yüklenme aşamasında gösterilecek
+        }
+
+        return (
+            <div>
+                {videos.map(video => (
+                    <div key={video.id}>{video.title || video.name}</div> // Veriyi render ediyoruz
+                ))}
+            </div>
+        );
+    }
+
+    TrendingVideos()
+
     return (
         <div className='text-[#eee] flex justify-between'>
             <div className="flex gap-8 ">
@@ -81,6 +117,16 @@ function Header() {
                 </div>
             </div>
             <img src={userPhoto} alt="" className='w-[50px] object-contain mr-3' />
+            {/* {
+                api.getTrendingVideos()
+                    .then(res => {
+                        console.log(res.data)
+                    })
+                    .catch((err) => {
+                        console.log(err)
+                    }
+                    )
+            } */}
         </div>
     )
 }
