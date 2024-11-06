@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../imgs/disney-logo-disney-icon-transparent-free-png.webp'
-import userPhoto from '../imgs/user.png'
+import logo from '../assets/imgs/logo.png'
+import userPhoto from '../assets/imgs/user.png'
 // import { IconName } from "react-icons/fi"
 import { HiPlus } from "react-icons/hi";
 import { HiPlayCircle } from "react-icons/hi2";
@@ -80,7 +80,7 @@ function Header() {
     TrendingVideos()
 
     return (
-        <div className='text-[#eee] flex justify-between'>
+        <div className='text-[#eee] flex justify-between py-4'>
             <div className="flex gap-8 ">
                 <img src={logo} alt="" className='w-[80px] md:w-[115px] object-cover items-center' />
                 <div className="hidden md:flex">

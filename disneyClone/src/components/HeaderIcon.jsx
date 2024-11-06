@@ -5,7 +5,7 @@ function HeaderIcon({ name, Icons }) {
     return (
         <div className='flex items-center font-bold gap-3 text-[15px] p-3 group'>
             {<Icons className='' />}
-            <div className="iconName group-hover:underline underline-offset-8 transition ease-in-out">
+            <div className="iconName group-hover:underline underline-offset-8 transition ease-in-out whitespace-nowrap">
                 {name}
             </div>
         </div>

@@ -6,6 +6,7 @@ import viteLogo from '/vite.svg'
 import Header from './components/Header'
 import '../src/css/output.css'
 import Slider from './components/Slider'
+import ProductionHouse from './components/ProductionHouse'
 
 
 function App() {
@@ -13,12 +14,14 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#040714] h-screen ">
+      <div className="bg-[#040714]">
         <Header />
         <Slider />
+        <ProductionHouse />
       </div>
     </>
   )
 }
 
 export default App
+
