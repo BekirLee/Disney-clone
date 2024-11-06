@@ -558,6 +558,20 @@ video {
   position: absolute;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -566,8 +580,44 @@ video {
   margin-right: 0.75rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-\[1150px\] {
+  margin-top: 1150px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
+.mt-\[150p\] {
+  margin-top: 150p;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-\[350px\] {
+  margin-top: 350px;
+}
+
+.ml-\[600px\] {
+  margin-left: 600px;
+}
+
+.mr-\[-100px\] {
+  margin-right: -100px;
 }
 
 .flex {
@@ -576,6 +626,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-\[500px\] {
+  height: 500px;
 }
 
 .h-screen {
@@ -588,6 +642,18 @@ video {
 
 .w-\[80px\] {
   width: 80px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .items-center {
@@ -604,6 +670,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.overscroll-x-auto {
+  overscroll-behavior-x: auto;
 }
 
 .rounded {
@@ -629,6 +699,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -639,8 +714,18 @@ video {
      object-fit: cover;
 }
 
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
 .p-3 {
   padding: 0.75rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-5 {
@@ -653,8 +738,18 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .text-\[15px\] {
   font-size: 15px;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -664,6 +759,11 @@ video {
 .text-\[\#eee\] {
   --tw-text-opacity: 1;
   color: rgb(238 238 238 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline-offset-8 {
@@ -687,6 +787,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }

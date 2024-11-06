@@ -5,14 +5,17 @@ import viteLogo from '/vite.svg'
 // import './tailwind.css'
 import Header from './components/Header'
 import '../src/css/output.css'
+import Slider from './components/Slider'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="bg-[#040714] h-screen">
+      <div className="bg-[#040714] h-screen ">
         <Header />
+        <Slider />
       </div>
     </>
   )
