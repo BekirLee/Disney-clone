@@ -47,37 +47,37 @@ function Header() {
 
     ]
 
-    function TrendingVideos() {
-        const [videos, setVideos] = useState([]); // Videoları tutacak state
-        const [loading, setLoading] = useState(true); // Yüklenme durumu
+    // function TrendingVideos() {
+    //     const [videos, setVideos] = useState([]); // Videoları tutacak state
+    //     const [loading, setLoading] = useState(true); // Yüklenme durumu
 
-        useEffect(() => {
-            api.getTrendingVideos()
-                .then(res => {
-                    console.log(res)
-                    setVideos(res.data.results); // Gelen veriyi state'e set et
-                    setLoading(false); // Yüklenme durumunu false yap
-                })
-                .catch((err) => {
-                    console.error(err); // Hataları console'a yaz
-                    setLoading(false); // Yüklenme durumunu hata olsa bile false yap
-                });
-        }, []); // Boş bağımlılık dizisi, component mount olduğunda bir kere çalışacak
+    //     useEffect(() => {
+    //         api.getTrendingVideos()
+    //             .then(res => {
+    //                 console.log(res)
+    //                 setVideos(res.data.results); // Gelen veriyi state'e set et
+    //                 setLoading(false); // Yüklenme durumunu false yap
+    //             })
+    //             .catch((err) => {
+    //                 console.error(err); // Hataları console'a yaz
+    //                 setLoading(false); // Yüklenme durumunu hata olsa bile false yap
+    //             });
+    //     }, []); // Boş bağımlılık dizisi, component mount olduğunda bir kere çalışacak
 
-        if (loading) {
-            return <div>Loading...</div>; // Yüklenme aşamasında gösterilecek
-        }
+    //     if (loading) {
+    //         return <div>Loading...</div>; // Yüklenme aşamasında gösterilecek
+    //     }
 
-        return (
-            <div>
-                {videos.map(video => (
-                    <div key={video.id}>{video.title || video.name}</div> // Veriyi render ediyoruz
-                ))}
-            </div>
-        );
-    }
+    //     return (
+    //         <div>
+    //             {videos.map(video => (
+    //                 <div key={video.id}>{video.title || video.name}</div> // Veriyi render ediyoruz
+    //             ))}
+    //         </div>
+    //     );
+    // }
 
-    TrendingVideos()
+    // TrendingVideos()
 
     return (
         <div className='text-[#eee] flex justify-between py-4'>

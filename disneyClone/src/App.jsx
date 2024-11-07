@@ -7,6 +7,7 @@ import Header from './components/Header'
 import '../src/css/output.css'
 import Slider from './components/Slider'
 import ProductionHouse from './components/ProductionHouse'
+import GenreMovieList from './components/GenreMovieList'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Header />
         <Slider />
         <ProductionHouse />
+        <GenreMovieList />
       </div>
     </>
   )
