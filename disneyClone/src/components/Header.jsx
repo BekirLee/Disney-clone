@@ -81,8 +81,8 @@ function Header() {
 
     return (
         <div className='text-[#eee] flex justify-between py-4'>
-            <div className="flex gap-8 ">
-                <img src={logo} alt="" className='w-[80px] md:w-[115px] object-cover items-center' />
+            <div className="flex gap-3 md:gap-8 ">
+                <img src={logo} alt="" className='w-[80px] md:w-[115px] object-contain items-center' />
                 <div className="hidden md:flex">
                     {
                         menu.map((iconItem, index) => (
@@ -116,17 +116,7 @@ function Header() {
                         </div> : null}
                 </div>
             </div>
-            <img src={userPhoto} alt="" className='w-[50px] object-contain mr-3' />
-            {/* {
-                api.getTrendingVideos()
-                    .then(res => {
-                        console.log(res.data)
-                    })
-                    .catch((err) => {
-                        console.log(err)
-                    }
-                    )
-            } */}
+            <img src={userPhoto} alt="" className='w-[40px] md:w-[50px] object-contain mr-3' />
         </div>
     )
 }
