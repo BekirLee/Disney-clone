@@ -40,11 +40,11 @@ function SingleGenreMovie({ genreId }) {
         <div className="relative">
 
             <HiChevronLeft
-                className="z-[3] hidden md:block text-3xl cursor-pointer text-white absolute top-1/2 transform -translate-y-1/2 left-4"
+                className="z-[3] hidden md:block text-5xl cursor-pointer text-white text-bold absolute top-1/2 transform -translate-y-1/2 left-4"
                 onClick={sliderLeft}
             />
             <HiChevronRight
-                className="z-[3] hidden md:block text-3xl cursor-pointer text-white absolute top-1/2 transform -translate-y-1/2 right-4"
+                className="z-[3] hidden md:block text-5xl cursor-pointer text-white text-bold absolute top-1/2 transform -translate-y-1/2 right-4"
                 onClick={sliderRight}
             />
 
